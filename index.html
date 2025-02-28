@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+    <link rel="stylesheet" href="./assets/style.css">
+</head>
+
+<body>
+
+        <div id="taskForm" class="container">
+            <h2>To-Do List</h2>
+            <input type="text" id="taskName" placeholder="Nome da tarefa" autocomplete="off">
+            <input type="text" id="taskDescription" placeholder="Descrição" autocomplete="off">
+            <input type="date" id="taskDeadline">
+            <select id="taskPriority">
+                <option value="" disabled selected>Prioridade</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select>
+            <input type="text" id="taskCategoryInput" placeholder="Categoria" list="categorySuggestions"
+                autocomplete="off">
+            <datalist id="categorySuggestions"></datalist>
+            <select id="taskStatus">
+                <option value="todo">To-Do</option>
+                <option value="doing">Doing</option>
+                <option value="done">Done</option>
+            </select>
+            <button id="addTaskBtn">Adicionar</button>
+        </div>
+        <div class="container">
+            <ul id="taskList"></ul>
+        </div>
+    <script src="./assets/script.js"></script>
+</body>
+
+</html>
